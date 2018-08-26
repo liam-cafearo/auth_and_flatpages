@@ -33,5 +33,6 @@ class User(AbstractUser):
     # number of custom attributes to our user class
 
     # in later units we'll be adding things like payment details!
+    stripe_id = models.CharField(max_length=40, default='')
 
     objects = AccountUserManager()
