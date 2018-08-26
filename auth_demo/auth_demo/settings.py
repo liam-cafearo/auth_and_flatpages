@@ -128,3 +128,7 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'accounts.backends.EmailAuth',
 )
+
+# Stripe environment variables
+STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', 'pk_test_XM1d9ZdgN3EmNQrFAGaSbG9e')
+STIPE_SECRET = os.getenv('STRIPE_SECRET', 'sk_test_TT86LFyGyFQTGKlQ4kOEVrTc')
