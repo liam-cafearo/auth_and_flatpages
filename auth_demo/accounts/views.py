@@ -23,7 +23,7 @@ def register(request):
             try:
                 customer = stripe.Charge.create(
                     amount=999,
-                    currency="USD",
+                    currency="GBP",
                     description=form.cleaned_data['email'],
                     card=form.cleaned_data['stripe_id'],
                 )
