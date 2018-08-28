@@ -48,6 +48,8 @@ def register(request):
                 # Stripe Subscription
                 if customer:
                     user = form.save()
+                    user = auth.authenticate(email=request.POST.get('email'),
+                                             password=request.POST.get('password1'))
                     user.stripe_id = customer.id
                     user.subscription_end = arrow.now().replace(weeks=+4).datetime
                     user.save()

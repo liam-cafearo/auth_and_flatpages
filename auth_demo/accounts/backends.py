@@ -23,5 +23,5 @@ class EmailAuth(object):
             user = User.objects.get(pk=user_id)
             if user.is_active:
                 return user
-        except user.DoesNotExist:
+        except User.DoesNotExist:
             return None
