@@ -20,7 +20,7 @@
         <div class="masthead">
             <ul class="nav nav-pills pull-right">
                 <li>
-                    <a href="#">Home</a>
+                    <a href="/">Home</a>
                 </li>
                 <li>
                     <a href="#">About</a>
@@ -29,6 +29,9 @@
                     <a href="#">Contact</a>
                 </li>
                 {% if request.user.is_authenticated %}
+                <li>
+                    <a href="{% url 'profile' %}"></a>
+                </li>
                 <li>
                     <a href="{% url 'logout' %}">Log Out</a>
                 </li>
